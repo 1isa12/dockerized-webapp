@@ -137,15 +137,32 @@ Took a screenshot of app running via EC2
 
 ## Screenshots Collected
 
-* Docker app running locally
-* EC2 instance dashboard
-* SSH terminal session on EC2
-* App running via public EC2 IP
+* App running locally via Docker
+* EC2 dashboard (running instance)
+* SSH terminal with Docker commands
+* Terminal with Build commands
+* Browser view of app on EC2 public IP
+* App running in EC2 terminal
+* Running deploy.sh on EC2(Bonus)
+* Running deploy.sh in browser(Bonus)
 
-Uploaded to Google Drive: [Your Drive Link Here](#)
+## Bonus: deploy.sh Script
+To automate the full setup process on a new EC2 instance, a `deploy.sh` script is included in this repository.
 
----
+### What It Does
+- Installs Docker
+- Clones the GitHub repository
+- Builds the Docker image
+- Runs the app on port 3000
 
-## ✅ Conclusion
+### How to Use (on EC2)
+```bash
+chmod +x deploy.sh
+./deploy.sh
+````
+Uploaded to Google Drive: https://docs.google.com/document/d/1hWFhIEE4FBQrPVThZeHWsS63O82JAUjH/edit?usp=drive_link&ouid=113888275271446763439&rtpof=true&sd=true
 
-Successfully containerized and deployed a Node.js app using Docker on AWS EC2 with proper documentation and DevOps practices.
+## Conclusion
+
+Successfully containerized and deployed a Node.js app using Docker on AWS EC2 with proper documentation and DevOps practices. Automation was implemented through a `deploy.sh` script to enable one-step setup and deployment on new cloud instances.
+
